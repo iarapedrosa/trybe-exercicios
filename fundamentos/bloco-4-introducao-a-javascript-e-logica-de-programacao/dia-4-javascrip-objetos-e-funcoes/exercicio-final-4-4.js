@@ -49,3 +49,16 @@ leitor.livrosFavoritos.push(
 );
 
 console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
+
+//Função (palíndromo)
+
+function palindromo(palavra){
+    if(palavra == palavra.split("").reverse().join("")){
+        console.log('true')
+    } else{
+        console.log('false')
+    }
+}
+
+palindromo('arara')
+palindromo('iara')
