@@ -50,7 +50,7 @@ leitor.livrosFavoritos.push(
 
 console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
 
-//Função (palíndromo)
+// Função (verificação de palíndromo)
 
 function palindromo(palavra){
     if(palavra == palavra.split("").reverse().join("")){
@@ -60,5 +60,33 @@ function palindromo(palavra){
     }
 }
 
-palindromo('arara')
-palindromo('iara')
+palindromo('arara') //true
+palindromo('iara') //false
+
+// Função (retornar o índice do maior valor de array de inteiros)
+
+function indiceDoMaior(numeros) {
+    let indiceMaior = 0;
+    for (let indice in numeros) {
+      if (numeros[indiceMaior] < numeros[indice]) {
+        indiceMaior = indice;
+      }
+    }
+    return indiceMaior;
+}
+
+console.log(indiceDoMaior([2, 3, 6, 7, 10, 1])); //4
+
+// Função (retornar o índice do menor valor de array de inteiros)
+
+function indiceDoMenor(numeros) {
+    let indiceMenor = 0;
+    for (let indice in numeros) {
+      if (numeros[indiceMenor] > numeros[indice]) {
+        indiceMenor = indice;
+      }
+    }
+    return indiceMenor;
+}
+  
+console.log(indiceDoMenor([2, 3, 6, 7, 10, 1])); //5
